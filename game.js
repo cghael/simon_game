@@ -5,7 +5,7 @@ var userClickedPattern = [];
 var level = 0;
 var pressed = false;
 
-$("#level-title").on("click", function() {
+$(document).on("click", function() {
     if (pressed === false) {
         pressed = true;
         $("#level-title").text("Level " + level);
@@ -38,7 +38,7 @@ function checkAnswer(currentLevel) {
         setTimeout(function() {
             $("body").removeClass("game-over");
         }, 200);
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over, Click to Restart");
         startOver()
     }
 }
