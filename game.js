@@ -5,12 +5,12 @@ var userClickedPattern = [];
 var level = 0;
 var pressed = false;
 
-$(document).on("keydown", function() {
+$("#level-title").on("click", function() {
     if (pressed === false) {
+        pressed = true;
         $("#level-title").text("Level " + level);
         nextSequence();
     }
-    pressed = true;
 });
 
 $(".btn").on("click", function() {
